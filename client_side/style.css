@@ -1,0 +1,13 @@
+.row{
+    float: left;
+    height: 80px;
+    border:  solid 1px
+}
+.name{
+    height: 38px;
+    border: solid 1px;
+}
+.answer {
+    height: 38px;
+    border: solid 1px;
+}
