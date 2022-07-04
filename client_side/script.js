@@ -1,10 +1,12 @@
+// https://apply-form.herokuapp.com/api/apply/alienName
+
 document.getElementById("button").addEventListener("click", apiRequest);
 
 async function apiRequest() {
   const alienName = document.querySelector("input").value;
   try {
     const response = await fetch(
-      `http://localhost:7500/api/apply/${alienName}`
+      `https://apply-form.herokuapp.com/api/apply/${alienName}`
     );
     const data = await response.json();
 

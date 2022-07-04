@@ -1,17 +1,15 @@
 const { response } = require("express");
 const express = require("express");
-
+require("dotenv").config();
 const app = express();
-const PORT = 7500;
+// const PORT = 7500;
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost:27017";
-const connectionString = `mongodb+srv://iradukundajo123-:${encodeURIComponent(
-  "8hp3p7_q7iv#FfV"
-)}@cluster0.lpxbzlt.mongodb.net/?retryWrites=true&w=majority`;
+
+const connectionString = process.env.DB_STRING;
 MongoClient.connect(connectionString)
   .then((client) => {
     console.log("Connected to Database");
